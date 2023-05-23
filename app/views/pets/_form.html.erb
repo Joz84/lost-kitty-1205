@@ -1,0 +1,27 @@
+<%#= @pet.errors.messages %>
+
+<%#= form_with model: pet do |f| %>
+    <%#= f.label :species  %>
+    <%#= f.text_field :species %>
+    <%#= f.label :name  %>
+    <%#= f.text_field :name %>
+    <%#= f.label :address  %>
+    <%#= f.text_field :address %>
+    <%#= f.label :description  %>
+    <%#= f.text_field :description %>
+    <%#= f.label :mark  %>
+    <%#= f.check_box :mark %>
+    <%#= f.label :found  %>
+    <%#= f.check_box :found %>
+    <%#= f.submit %>
+<%# end %>
+
+<%= simple_form_for pet do |f| %>
+    <%= f.input :species, label: "species" %>
+    <%= f.input :name, label: "name" %>
+    <%= f.input :address, label: "address" %>
+    <%= f.input :description, label: "description" %>
+    <%= f.input :mark, label: "mark" %>
+    <%= f.input :found, label: "found" %>
+  <%= f.button :submit %>
+<% end %>

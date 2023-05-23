@@ -1,0 +1,8 @@
+<h1><%= @pet %></h1>
+
+<h2>Species: <%= @pet.species %></h2>
+
+<p><i><strong>Description : </strong></i> <%= @pet.description %></p>
+
+<%= link_to "Edit", edit_pet_path(@pet) %>
+<%= link_to "Remove", pet_path(@pet), data: {turbo_method: :delete} %>
